@@ -33,11 +33,13 @@ export function ProposalTipScreen() {
     return (totalAmount * percentage) / 100;
   };
 
+  const isProd = process.env.NODE_ENV === "production";
+
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-6 relative">
       <Image
         alt="namu-cooking"
-        src={"/namu-cooking.jpg"}
+        src={`${isProd ? "./" : "/"}namu-cooking.jpg`}
         width={500}
         height={500}
         className="w-full rounded-xl absolute z-0 opacity-80"
@@ -72,19 +74,18 @@ export function ProposalTipScreen() {
           <div className="flex flex-row items-center ">
             <Image
               alt="namu"
-              // src={!selectedTip ? "/namu-crying.jpg" : selectedTip < 20 ? "/namu-crying.jpg" : selectedTip < 25 ? "/namu-counting.webp"}
               src={
                 !selectedTip || selectedTip < 10
-                  ? "/namu-angry.gif"
+                  ? `${isProd ? "./" : "/"}namu-angry.gif`
                   : selectedTip < 20
-                  ? "/namu-crying.jpg"
+                  ? `${isProd ? "./" : "/"}namu-crying.jpg`
                   : selectedTip < 25
-                  ? "/namu-counting.webp"
+                  ? `${isProd ? "./" : "/"}namu-counting.webp`
                   : selectedTip < 50
-                  ? "/namu-happy.jpg"
+                  ? `${isProd ? "./" : "/"}namu-happy.jpg`
                   : selectedTip < 75
-                  ? "/namu-wavy.jpg"
-                  : "/namu-headpat.jpg"
+                  ? `${isProd ? "./" : "/"}namu-wavy.jpg`
+                  : `${isProd ? "./" : "/"}namu-headpat.jpg`
               }
               width={200}
               height={200}
