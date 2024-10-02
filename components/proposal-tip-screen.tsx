@@ -36,7 +36,7 @@ export function ProposalTipScreen() {
   const isProd = process.env.NODE_ENV === "production";
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-6 relative">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-6 relative overflow-hidden">
       <Image
         alt="namu-cooking"
         src={`${isProd ? "./" : "/"}namu-cooking.jpg`}

@@ -22,16 +22,18 @@ const CustomTipScreen = ({
 
   const getCustomTipMessage = (percentage: number) => {
     if (percentage <= 0)
-      return "Zero? Did you accidentally click that? Or do you want the divorce papers already?";
+      return "Zero? Did you accidentally click that? Or do you want the divorce papers already? 😠";
     if (percentage <= 10)
-      return "Under 10%? I hope you understand we're together for life";
-    if (percentage <= 20) return "Getting warmer! I might even give you a kiss";
-    if (percentage <= 30) return "Alright alright, I see you, I seeee youuuu";
+      return "Under 10%? I hope you understand we're together for life 😤😤";
+    if (percentage <= 20)
+      return "Getting warmer? Still hurts 😭 I got bills to pay 😭";
+    if (percentage <= 30)
+      return "Alright alright, I see you, I seeee youuuu 👀";
     if (percentage <= 40) return "You actually do love me 🥺🥺";
     if (percentage <= 50)
-      return "I knew you were the one! I knew you loved me! You're the girl I'm going to marry!";
+      return "I knew you were the one! I knew you loved me! You're the girl I'm going to marry! 💍";
     if (percentage <= 75)
-      return "Alright now I know you're just pandering me. Thanks for the thoughts";
+      return "Alright now I know you're just pandering me. Thanks though 😘";
     return "I know you don't have that kind of money. But love you anyway ❤️";
   };
 
