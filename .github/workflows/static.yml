@@ -44,7 +44,7 @@ jobs:
 
       # Build the Next.js site
       - name: Build project
-        run: npm run build && npm run export
+        run: npm run build
 
       # Upload the `out` directory (default for `next export`) as an artifact
       - name: Upload artifact
